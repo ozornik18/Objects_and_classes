@@ -1,15 +1,15 @@
 public class Book {
 
-    private String authorName;
-    private String authorSecondName;
+    private Author authorName;
+    private Author authorSecondName;
     String bookName;
     int publishingYear;
 
-    public String getAuthorName() {
+    public Author getAuthorName() {
         return authorName;
     }
 
-    public String getAuthorSecondName() {
+    public Author getAuthorSecondName() {
         return authorSecondName;
     }
 
