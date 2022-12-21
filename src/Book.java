@@ -3,7 +3,7 @@ public class Book {
     private Author authorName;
     private Author authorSecondName;
     String bookName;
-    int publishingYear;
+    private int publishingYear;
 
     public Author getAuthorName() {
         return authorName;
@@ -21,5 +21,8 @@ public class Book {
         this.publishingYear = publishingYear;
     }
 
+    public int getPublishingYear() {
+        return publishingYear;
+    }
 
 }

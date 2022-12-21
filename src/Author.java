@@ -1,7 +1,7 @@
-public class Author {
+class Author {
 
-    String authorName;
-    String authorSecondName;
+     String authorName;
+     String authorSecondName;
 
     public String getAuthorName() {
         return authorName;
