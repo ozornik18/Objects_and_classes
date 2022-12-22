@@ -1,27 +1,30 @@
 public class Main {
-
     public static void main(String[] args) {
+        Author levTolstoi = new Author("Лев", "Толстой");
+        Author AleksandrGrin = new Author("Александр", "Грин");
 
-        Book oneBook = new Book();
-        oneBook.bookName = "Война и Мир";
-        oneBook.setPublishingYear(1867);
+        Books warAndPeace = new Books(levTolstoi, "Война и мир", 1867);
+        Books scarletSails = new Books(AleksandrGrin, "Алые паруса", 1923);
 
-        Author oneBook1 = new Author();
-        oneBook1.authorName = "Лев";
-        oneBook1.authorSecondName = "Толстой";
+        warAndPeace.setPublishingYear(2022);
+        scarletSails.setPublishingYear(2022);
 
-        Book secondBook = new Book();
-        secondBook.bookName = "Алые паруса";
-        secondBook.setPublishingYear(1923);
+        Books[] books = {warAndPeace, scarletSails};
+        for (int i = 0; i < books.length; i++) {
+            System.out.println(books[i]);
+        }
+        System.out.println("Что-то не так!");
 
-        Author secondBook1 = new Author();
-        secondBook1.authorName = "Александр";
-        secondBook1.authorSecondName = "Грин";
+        warAndPeace.setPublishingYear(1867);
+        scarletSails.setPublishingYear(1923);
+        for (int i = 0; i < books.length; i++) {
+            System.out.println(books[i]);
+        }
+        if (warAndPeace.equals(scarletSails)) {
+            System.out.println("Книги разные");
+        } else {
+            System.out.println("книги отличаются");
+        }
 
-
-        System.out.println("Автор - " + secondBook1.getAuthorName() + " " + secondBook1.getAuthorSecondName());
-        System.out.println("Название - " + secondBook.bookName);
-        System.out.println("Год - " + secondBook.getPublishingYear());
     }
-
 }
